@@ -11,7 +11,7 @@ namespace SemesterProjekt
     {
         public static List<Måling> ReadRoom1()
         {
-            string connectionString = @"Data Source=C:\Users\Ali Najafi\testing.db";
+            string connectionString = @"Data Source=C:\Users\nomis\Documents\GitHub\Semesterprojekt2\database.db";
             List<Måling> målingerRum1 = new List<Måling>();
             using (SQLiteConnection conn = new SQLiteConnection(connectionString))
             {
@@ -25,7 +25,7 @@ namespace SemesterProjekt
                             Måling Ny = new Måling
                             {
                                 Tidspunkt = DateTime.Parse(reader["Time"].ToString()),
-                                Temprature = Convert.ToDouble(reader["Tempratur"]),
+                                Temprature = reader.GetDecimal(reader.GetOrdinal("Temperatur")),
                                 Aktivitet = Convert.ToInt32(reader["Aktivitet"])
 
 
@@ -46,7 +46,7 @@ namespace SemesterProjekt
 
         public static List<Måling> ReadRoom2()
         {
-            string connectionString = @"Data Source=C:\Users\Ali Najafi\testing2.db";
+            string connectionString = @"Data Source=C:\Users\nomis\Documents\GitHub\Semesterprojekt2\database.db";
             List<Måling> målingerRum2 = new List<Måling>();
             using (SQLiteConnection conn = new SQLiteConnection(connectionString))
             {
@@ -61,7 +61,7 @@ namespace SemesterProjekt
                             Måling Ny = new Måling
                             {
                                 Tidspunkt = DateTime.Parse(reader["Time"].ToString()),
-                                Temprature = Convert.ToDouble(reader["Tempratur"]),
+                                Temprature = reader.GetDecimal(reader.GetOrdinal("Temperatur")),
                                 Aktivitet = Convert.ToInt32(reader["Aktivitet"])
 
                             };
