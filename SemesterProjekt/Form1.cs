@@ -67,8 +67,8 @@ namespace SemesterProjekt
             curTemp1.Text = målingerRoom1[målingerRoom1.Count()-1].Temprature.ToString() + " grader";
             curTemp2.Text = målingerRoom2[målingerRoom2.Count()-1].Temprature.ToString() + " grader";
 
-            avgTempRoom1.Text = (totalRoom1 / målingerRoom1.Count).ToString() + " grader";
-            avgTempRoom2.Text = (totalRoom2 / målingerRoom2.Count).ToString() + " grader";
+            avgTempRoom1.Text = (totalRoom1 / målingerRoom1.Count).ToString("0.00") + " grader";
+            avgTempRoom2.Text = (totalRoom2 / målingerRoom2.Count).ToString("0.00") + " grader";
 
             dataGridView1.Columns[2].Visible = false;
             dataGridView2.Columns[2].Visible = false;
@@ -89,6 +89,9 @@ namespace SemesterProjekt
                 case 1:
                     label8.Text = "Modtager varme";
                     break;
+                default:
+                    label8.Text = "fejl";
+                    break;
             }
 
             switch (målingerRoom2[målingerRoom2.Count - 1].Aktivitet)
@@ -101,6 +104,9 @@ namespace SemesterProjekt
                     break;
                 case 1:
                     label11.Text = "Modtager varme";
+                    break;
+                default:
+                    label11.Text = "fejl";
                     break;
             }
         }
