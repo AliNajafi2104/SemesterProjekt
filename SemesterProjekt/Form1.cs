@@ -38,7 +38,7 @@ namespace SemesterProjekt
         }
         private void Timer_Tick(object sender, EventArgs e)
         {
-            Refresh(); // Call Refresh every 10 seconds
+            Refresh(); //Data bliver opdateret hvert 10 sekund.
         }
 
         private void Refresh()
@@ -106,99 +106,99 @@ namespace SemesterProjekt
         }
 
 
-
-       /* private void Byte()
-        {
-            switch (målingerRoom1[målingerRoom1.Count-1].Byte)
-            {
-                case 12:
-                    AktivitetRum1.Text += "Aktiv";
-                    StatusRum1.Text += "Passiv/neutral";
-                    break;
-                case 10:
-                    AktivitetRum1.Text += "Aktiv";
-                    StatusRum1.Text += "Forbruger varme";
-                    break;
-                case 9:
-                    AktivitetRum1.Text += "Aktiv";
-                    StatusRum1.Text += "Afgiver varme";
-                    break;
-
-
-
-
-                case 4:
-                    AktivitetRum1.Text += "Ikke-aktiv";
-                    StatusRum1.Text += "Passiv/neutral";
-
-                    break;
-
-
-
-                case 2:
-                    AktivitetRum1.Text += "Ikke-aktiv";
-                    StatusRum1.Text += "Forbruger varme";
-                    break;
-
-                case 1:
-                    AktivitetRum1.Text += "Ikke-aktiv";
-                    StatusRum1.Text += "Afgiver varme";
-                    break;
-
-                default:
-                    AktivitetRum1.Text += "fejl";
-                    StatusRum1.Text += "fejl";
-                    break;
-            }
+        #region kommentar
+        /* private void Byte()
+         {
+             switch (målingerRoom1[målingerRoom1.Count-1].Byte)
+             {
+                 case 12:
+                     AktivitetRum1.Text += "Aktiv";
+                     StatusRum1.Text += "Passiv/neutral";
+                     break;
+                 case 10:
+                     AktivitetRum1.Text += "Aktiv";
+                     StatusRum1.Text += "Forbruger varme";
+                     break;
+                 case 9:
+                     AktivitetRum1.Text += "Aktiv";
+                     StatusRum1.Text += "Afgiver varme";
+                     break;
 
 
 
 
-            switch (målingerRoom2[målingerRoom2.Count - 1].Byte)
-            {
-                case 12:
-                    AktivitetRum2.Text += "Aktiv";
-                    StatusRum2.Text += "Passiv/neutral";
-                    break;
-                case 10:
-                    AktivitetRum2.Text += "Aktiv";
-                    StatusRum2.Text += "Forbruger varme";
-                    break;
-                case 9:
-                    AktivitetRum2.Text += "Aktiv";
-                    StatusRum2.Text += "Afgiver varme";
-                    break;
+                 case 4:
+                     AktivitetRum1.Text += "Ikke-aktiv";
+                     StatusRum1.Text += "Passiv/neutral";
+
+                     break;
+
+
+
+                 case 2:
+                     AktivitetRum1.Text += "Ikke-aktiv";
+                     StatusRum1.Text += "Forbruger varme";
+                     break;
+
+                 case 1:
+                     AktivitetRum1.Text += "Ikke-aktiv";
+                     StatusRum1.Text += "Afgiver varme";
+                     break;
+
+                 default:
+                     AktivitetRum1.Text += "fejl";
+                     StatusRum1.Text += "fejl";
+                     break;
+             }
 
 
 
 
-                case 4:
-                    AktivitetRum2.Text += "Ikke-aktiv";
-                    StatusRum2.Text += "Passiv/neutral";
+             switch (målingerRoom2[målingerRoom2.Count - 1].Byte)
+             {
+                 case 12:
+                     AktivitetRum2.Text += "Aktiv";
+                     StatusRum2.Text += "Passiv/neutral";
+                     break;
+                 case 10:
+                     AktivitetRum2.Text += "Aktiv";
+                     StatusRum2.Text += "Forbruger varme";
+                     break;
+                 case 9:
+                     AktivitetRum2.Text += "Aktiv";
+                     StatusRum2.Text += "Afgiver varme";
+                     break;
 
-                    break;
 
 
 
-                case 2:
-                    AktivitetRum2.Text += "Ikke-aktiv";
-                    StatusRum2.Text += "Forbruger varme";
-                    break;
+                 case 4:
+                     AktivitetRum2.Text += "Ikke-aktiv";
+                     StatusRum2.Text += "Passiv/neutral";
 
-                case 1:
-                    AktivitetRum2.Text += "Ikke-aktiv";
-                    StatusRum2.Text += "Afgiver varme";
-                    break;
+                     break;
 
-                default:
-                    AktivitetRum2.Text += "fejl";
-                    StatusRum2.Text += "fejl";
-                    break;
-            }
 
-        }
-       */
-       
+
+                 case 2:
+                     AktivitetRum2.Text += "Ikke-aktiv";
+                     StatusRum2.Text += "Forbruger varme";
+                     break;
+
+                 case 1:
+                     AktivitetRum2.Text += "Ikke-aktiv";
+                     StatusRum2.Text += "Afgiver varme";
+                     break;
+
+                 default:
+                     AktivitetRum2.Text += "fejl";
+                     StatusRum2.Text += "fejl";
+                     break;
+             }
+
+         }
+        */
+        #endregion
 
 
 
