@@ -22,7 +22,8 @@ namespace SemesterProjekt
             chart1.Series.Add(rum1);
             chart1.Series.Add(rum2);
             Refresh();
-
+            chart1.ChartAreas[0].AxisY.Minimum = 20;
+            
             WindowState = FormWindowState.Maximized;
             dataGridView1.DataSource = SQLite.ReadRoom1();
             dataGridView2.DataSource = SQLite.ReadRoom2();
