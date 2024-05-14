@@ -90,7 +90,7 @@ namespace SemesterProjekt
                     label8.Text = "Modtager varme";
                     break;
                 default:
-                    label8.Text = "fejl";
+                    label8.Text = "";
                     break;
             }
 
@@ -106,7 +106,7 @@ namespace SemesterProjekt
                     label11.Text = "Modtager varme";
                     break;
                 default:
-                    label11.Text = "fejl";
+                    label11.Text = "";
                     break;
             }
         }
