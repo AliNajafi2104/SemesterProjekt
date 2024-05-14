@@ -23,7 +23,7 @@ namespace SemesterProjekt
             chart1.Series.Add(rum2);
             Refresh();
 
-
+            WindowState = FormWindowState.Maximized;
             dataGridView1.DataSource = SQLite.ReadRoom1();
             dataGridView2.DataSource = SQLite.ReadRoom2();
             chart1.Titles.Add("Kurve for " + DateTime.Now.ToString("MMMM dd, yyyy"));
@@ -49,8 +49,8 @@ namespace SemesterProjekt
                                  // akkummlerer i serierne
             målingerRoom1 = SQLite.ReadRoom1();
             målingerRoom2 = SQLite.ReadRoom2();
-            double totalRoom1 = 0;
-            double totalRoom2 = 0;
+            decimal totalRoom1 = 0;
+            decimal totalRoom2 = 0;
             foreach (Måling måling in målingerRoom1)
             {
                 rum1.Points.AddXY(måling.Tidspunkt.ToString("HH:mm"), måling.Temprature);
@@ -75,12 +75,7 @@ namespace SemesterProjekt
             
 
 
-            AktivitetRum1.Text = "Rum 1: ";
-
-            AktivitetRum2.Text = "Rum 2: ";
-
-            StatusRum1.Text = "Rum 1: ";
-            StatusRum2.Text = "Rum 2: ";
+           
 
 
             switch(målingerRoom1[målingerRoom1.Count-1].Aktivitet)

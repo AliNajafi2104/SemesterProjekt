@@ -25,7 +25,7 @@ namespace SemesterProjekt
                             Måling Ny = new Måling
                             {
                                 Tidspunkt = DateTime.Parse(reader["Time"].ToString()),
-                                Temprature = Convert.ToDouble(reader["Tempratur"]),
+                                Temprature = reader.GetDecimal(reader.GetOrdinal("Temperatur")),
                                 Aktivitet = Convert.ToInt32(reader["Aktivitet"])
 
 
@@ -61,7 +61,7 @@ namespace SemesterProjekt
                             Måling Ny = new Måling
                             {
                                 Tidspunkt = DateTime.Parse(reader["Time"].ToString()),
-                                Temprature = Convert.ToDouble(reader["Tempratur"]),
+                                Temprature = reader.GetDecimal(reader.GetOrdinal("Temperatur")),
                                 Aktivitet = Convert.ToInt32(reader["Aktivitet"])
 
                             };
