@@ -53,12 +53,12 @@ namespace SemesterProjekt
             decimal totalRoom2 = 0;
             foreach (Måling måling in målingerRoom1)
             {
-                rum1.Points.AddXY(måling.Tidspunkt.ToString("HH:mm"), måling.Temprature);
+                rum1.Points.AddXY(måling.Tidspunkt.ToString("HH:mm:ss"), måling.Temprature);
                 totalRoom1 += måling.Temprature;
             }
             foreach(Måling måling2 in målingerRoom2)
             {
-                rum2.Points.AddXY(måling2.Tidspunkt.ToString("HH:mm"), måling2.Temprature);
+                rum2.Points.AddXY(måling2.Tidspunkt.ToString("HH:mm:ss"), måling2.Temprature);
                 totalRoom2 += måling2.Temprature;
             }
             
