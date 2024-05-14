@@ -22,7 +22,8 @@ namespace SemesterProjekt
             chart1.Series.Add(rum1);
             chart1.Series.Add(rum2);
             Refresh();
-
+            chart1.ChartAreas[0].AxisY.Minimum = 20;
+            
             WindowState = FormWindowState.Maximized;
             dataGridView1.DataSource = SQLite.ReadRoom1();
             dataGridView2.DataSource = SQLite.ReadRoom2();
@@ -53,12 +54,12 @@ namespace SemesterProjekt
             decimal totalRoom2 = 0;
             foreach (Måling måling in målingerRoom1)
             {
-                rum1.Points.AddXY(måling.Tidspunkt.ToString("HH:mm"), måling.Temprature);
+                rum1.Points.AddXY(måling.Tidspunkt.ToString("HH:mm:ss"), måling.Temprature);
                 totalRoom1 += måling.Temprature;
             }
             foreach(Måling måling2 in målingerRoom2)
             {
-                rum2.Points.AddXY(måling2.Tidspunkt.ToString("HH:mm"), måling2.Temprature);
+                rum2.Points.AddXY(måling2.Tidspunkt.ToString("HH:mm:ss"), måling2.Temprature);
                 totalRoom2 += måling2.Temprature;
             }
             
@@ -90,7 +91,7 @@ namespace SemesterProjekt
                     label8.Text = "Modtager varme";
                     break;
                 default:
-                    label8.Text = "fejl";
+                    label8.Text = "";
                     break;
             }
 
@@ -106,7 +107,7 @@ namespace SemesterProjekt
                     label11.Text = "Modtager varme";
                     break;
                 default:
-                    label11.Text = "fejl";
+                    label11.Text = "";
                     break;
             }
         }
