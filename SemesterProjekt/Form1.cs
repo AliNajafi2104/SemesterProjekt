@@ -83,13 +83,13 @@ namespace SemesterProjekt
 
             switch(målingerRoom1[målingerRoom1.Count-1].Aktivitet)
             {
-                case -1:
+                case 4:
                     label8.Text = "Afgiver varme";
                     break;
                 case 0:
                     label8.Text = "Neutral/passiv";
                     break;
-                case 1:
+                case 10:
                     label8.Text = "Modtager varme";
                     break;
                 default:
@@ -99,13 +99,13 @@ namespace SemesterProjekt
 
             switch (målingerRoom2[målingerRoom2.Count - 1].Aktivitet)
             {
-                case -1:
+                case 4:
                     label11.Text = "Afgiver varme";
                     break;
                 case 0:
                     label11.Text = "Neutral/passiv";
                     break;
-                case 1:
+                case 10:
                     label11.Text = "Modtager varme";
                     break;
                 default:
