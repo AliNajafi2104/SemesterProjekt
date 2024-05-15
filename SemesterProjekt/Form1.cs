@@ -21,18 +21,18 @@ namespace SemesterProjekt
             rum2.MarkerStyle = MarkerStyle.Circle;
             chart1.Series.Add(rum1);
             chart1.Series.Add(rum2);
-            
 
-            Refresh();
-            chart1.ChartAreas[0].AxisY.Minimum = 20;
-            
-            WindowState = FormWindowState.Maximized;
             målingerRoom1 = SQLite.ReadRoom1();
             målingerRoom2 = SQLite.ReadRoom2();
             målingerRoom1.Reverse();
             målingerRoom2.Reverse();
             dataGridView1.DataSource = målingerRoom1;
             dataGridView2.DataSource = målingerRoom2;
+            Refresh();
+            chart1.ChartAreas[0].AxisY.Minimum = 20;
+            
+            WindowState = FormWindowState.Maximized;
+           
             chart1.Titles.Add("Kurve for " + DateTime.Now.ToString("MMMM dd, yyyy"));
 
 
