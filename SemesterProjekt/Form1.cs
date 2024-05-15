@@ -33,7 +33,7 @@ namespace SemesterProjekt
 
 
             Timer timer = new Timer();
-            timer.Interval = 10000; // 10 seconds
+            timer.Interval = 5000; // 10 seconds
             timer.Tick += Timer_Tick;
             timer.Start();
         }
@@ -50,6 +50,8 @@ namespace SemesterProjekt
                                  // akkummlerer i serierne
             målingerRoom1 = SQLite.ReadRoom1();
             målingerRoom2 = SQLite.ReadRoom2();
+            målingerRoom1.Reverse();
+            målingerRoom2.Reverse();
             decimal totalRoom1 = 0;
             decimal totalRoom2 = 0;
             foreach (Måling måling in målingerRoom1)
@@ -81,13 +83,13 @@ namespace SemesterProjekt
 
             switch(målingerRoom1[målingerRoom1.Count-1].Aktivitet)
             {
-                case -1:
+                case 4:
                     label8.Text = "Afgiver varme";
                     break;
                 case 0:
                     label8.Text = "Neutral/passiv";
                     break;
-                case 1:
+                case 10:
                     label8.Text = "Modtager varme";
                     break;
                 default:
@@ -97,13 +99,13 @@ namespace SemesterProjekt
 
             switch (målingerRoom2[målingerRoom2.Count - 1].Aktivitet)
             {
-                case -1:
+                case 4:
                     label11.Text = "Afgiver varme";
                     break;
                 case 0:
                     label11.Text = "Neutral/passiv";
                     break;
-                case 1:
+                case 10:
                     label11.Text = "Modtager varme";
                     break;
                 default:
