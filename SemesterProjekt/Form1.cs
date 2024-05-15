@@ -64,8 +64,7 @@ namespace SemesterProjekt
             curTemp1.Text = målingerRoom1[målingerRoom1.Count() - 1].Temprature.ToString() + " grader";
             curTemp2.Text = målingerRoom2[målingerRoom2.Count() - 1].Temprature.ToString() + " grader";
 
-            avgTempRoom1.Text = (totalRoom1 / målingerRoom1.Count).ToString("0.00") + " grader";
-            avgTempRoom2.Text = (totalRoom2 / målingerRoom2.Count).ToString("0.00") + " grader";
+           
             foreach (Måling måling in målingerRoom1)
             {
                 rum1.Points.AddXY(måling.Tidspunkt.ToString("HH:mm:ss"), måling.Temprature);
@@ -76,7 +75,8 @@ namespace SemesterProjekt
                 rum2.Points.AddXY(måling2.Tidspunkt.ToString("HH:mm:ss"), måling2.Temprature);
                 totalRoom2 += måling2.Temprature;
             }
-
+            avgTempRoom1.Text = (totalRoom1 / målingerRoom1.Count).ToString("0.00") + " grader";
+            avgTempRoom2.Text = (totalRoom2 / målingerRoom2.Count).ToString("0.00") + " grader";
             målingerRoom1.Reverse();
             målingerRoom2.Reverse();
             dataGridView1.DataSource = målingerRoom1;
