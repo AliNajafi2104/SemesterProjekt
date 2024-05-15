@@ -50,6 +50,8 @@ namespace SemesterProjekt
                                  // akkummlerer i serierne
             målingerRoom1 = SQLite.ReadRoom1();
             målingerRoom2 = SQLite.ReadRoom2();
+            målingerRoom1.Reverse();
+            målingerRoom2.Reverse();
             decimal totalRoom1 = 0;
             decimal totalRoom2 = 0;
             foreach (Måling måling in målingerRoom1)
