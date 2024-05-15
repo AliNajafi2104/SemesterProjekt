@@ -33,7 +33,7 @@ namespace SemesterProjekt
 
 
             Timer timer = new Timer();
-            timer.Interval = 10000; // 10 seconds
+            timer.Interval = 5000; // 10 seconds
             timer.Tick += Timer_Tick;
             timer.Start();
         }
