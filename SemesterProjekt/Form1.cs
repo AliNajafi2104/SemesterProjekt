@@ -24,7 +24,8 @@ namespace SemesterProjekt
 
             
             Refresh();
-            chart1.ChartAreas[0].AxisY.Minimum = 20;
+            chart1.ChartAreas[0].AxisY.Minimum = 10;
+            chart1.ChartAreas[0].AxisY.Maximum = 40;
             
             WindowState = FormWindowState.Maximized;
            
@@ -34,7 +35,7 @@ namespace SemesterProjekt
 
 
             Timer timer = new Timer();
-            timer.Interval = 5000; // 10 seconds
+            timer.Interval = 1000; // 10 seconds
             timer.Tick += Timer_Tick;
             timer.Start();
         }
@@ -63,17 +64,25 @@ namespace SemesterProjekt
             foreach (Måling måling in målingerRoom1)
             {
                 rum1.Points.AddXY(måling.Tidspunkt.ToString("HH:mm:ss"), måling.Temprature);
-                totalRoom1 += måling.Temprature;
+                
             }
             foreach(Måling måling2 in målingerRoom2)
             {
                 rum2.Points.AddXY(måling2.Tidspunkt.ToString("HH:mm:ss"), måling2.Temprature);
-                totalRoom2 += måling2.Temprature;
+               
+            }
+            
+           
+            målingerRoom1.Reverse();
+            målingerRoom2.Reverse();
+
+            for(int i = 0; i<10;i++)
+            {
+                 totalRoom1 = målingerRoom1[i].Temprature;
+                 totalRoom2 = målingerRoom2[i].Temprature;
             }
             avgTempRoom1.Text = (totalRoom1 / målingerRoom1.Count).ToString("0.00") + " grader";
             avgTempRoom2.Text = (totalRoom2 / målingerRoom2.Count).ToString("0.00") + " grader";
-            målingerRoom1.Reverse();
-            målingerRoom2.Reverse();
             dataGridView1.DataSource = målingerRoom1;
             dataGridView2.DataSource = målingerRoom2;
        
