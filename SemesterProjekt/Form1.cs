@@ -27,7 +27,12 @@ namespace SemesterProjekt
             chart1.ChartAreas[0].AxisY.Minimum = 20;
             
             WindowState = FormWindowState.Maximized;
-            
+            målingerRoom1 = SQLite.ReadRoom1();
+            målingerRoom2 = SQLite.ReadRoom2();
+            målingerRoom1.Reverse();
+            målingerRoom2.Reverse();
+            dataGridView1.DataSource = målingerRoom1;
+            dataGridView2.DataSource = målingerRoom2;
             chart1.Titles.Add("Kurve for " + DateTime.Now.ToString("MMMM dd, yyyy"));
 
 
