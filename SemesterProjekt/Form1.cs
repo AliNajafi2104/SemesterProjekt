@@ -50,8 +50,8 @@ namespace SemesterProjekt
                                  // akkummlerer i serierne
             målingerRoom1 = SQLite.ReadRoom1();
             målingerRoom2 = SQLite.ReadRoom2();
-            målingerRoom1.Reverse();
-            målingerRoom2.Reverse();
+            
+           
             decimal totalRoom1 = 0;
             decimal totalRoom2 = 0;
             foreach (Måling måling in målingerRoom1)
@@ -65,8 +65,7 @@ namespace SemesterProjekt
                 totalRoom2 += måling2.Temprature;
             }
             
-            dataGridView1.DataSource = målingerRoom1;
-            dataGridView2.DataSource = målingerRoom2;
+           
             curTemp1.Text = målingerRoom1[målingerRoom1.Count()-1].Temprature.ToString() + " grader";
             curTemp2.Text = målingerRoom2[målingerRoom2.Count()-1].Temprature.ToString() + " grader";
 
@@ -75,13 +74,17 @@ namespace SemesterProjekt
 
             dataGridView1.Columns[2].Visible = false;
             dataGridView2.Columns[2].Visible = false;
-            
+
+            målingerRoom1.Reverse();
+            målingerRoom2.Reverse();
+            dataGridView1.DataSource = målingerRoom1;
+            dataGridView2.DataSource = målingerRoom2;
 
 
-           
 
 
-            switch(målingerRoom1[målingerRoom1.Count-1].Aktivitet)
+
+            switch (målingerRoom1[målingerRoom1.Count-1].Aktivitet)
             {
                 case 4:
                     label8.Text = "Afgiver varme";
