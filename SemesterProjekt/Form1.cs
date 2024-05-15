@@ -22,12 +22,7 @@ namespace SemesterProjekt
             chart1.Series.Add(rum1);
             chart1.Series.Add(rum2);
 
-            målingerRoom1 = SQLite.ReadRoom1();
-            målingerRoom2 = SQLite.ReadRoom2();
-            målingerRoom1.Reverse();
-            målingerRoom2.Reverse();
-            dataGridView1.DataSource = målingerRoom1;
-            dataGridView2.DataSource = målingerRoom2;
+            
             Refresh();
             chart1.ChartAreas[0].AxisY.Minimum = 20;
             
