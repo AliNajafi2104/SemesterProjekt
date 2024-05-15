@@ -64,13 +64,10 @@ namespace SemesterProjekt
                 rum2.Points.AddXY(måling2.Tidspunkt.ToString("HH:mm:ss"), måling2.Temprature);
                 totalRoom2 += måling2.Temprature;
             }
-            målingerRoom1.Reverse();
-            målingerRoom2.Reverse();
+       
             dataGridView1.DataSource = målingerRoom1;
             dataGridView2.DataSource = målingerRoom2;
-            målingerRoom1.Reverse();
-            målingerRoom2.Reverse();
-
+       
             curTemp1.Text = målingerRoom1[målingerRoom1.Count()-1].Temprature.ToString() + " grader";
             curTemp2.Text = målingerRoom2[målingerRoom2.Count()-1].Temprature.ToString() + " grader";
 
