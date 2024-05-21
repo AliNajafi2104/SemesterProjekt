@@ -51,13 +51,7 @@
             this.avgTempRoom2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.AktivitetRum1 = new System.Windows.Forms.Label();
-            this.AktivitetRum2 = new System.Windows.Forms.Label();
             this.sqLiteCommand1 = new System.Data.SQLite.SQLiteCommand();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.StatusRum1 = new System.Windows.Forms.Label();
-            this.StatusRum2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
@@ -107,7 +101,7 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(449, 338);
+            this.dataGridView1.Size = new System.Drawing.Size(449, 444);
             this.dataGridView1.TabIndex = 2;
             // 
             // dataGridView2
@@ -131,13 +125,13 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView2.Location = new System.Drawing.Point(55, 481);
+            this.dataGridView2.Location = new System.Drawing.Point(55, 582);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(449, 340);
+            this.dataGridView2.Size = new System.Drawing.Size(449, 558);
             this.dataGridView2.TabIndex = 3;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
@@ -175,7 +169,7 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F);
-            this.panel2.Location = new System.Drawing.Point(1322, 835);
+            this.panel2.Location = new System.Drawing.Point(1323, 836);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(549, 4);
@@ -185,7 +179,7 @@
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F);
-            this.panel3.Location = new System.Drawing.Point(562, 898);
+            this.panel3.Location = new System.Drawing.Point(563, 898);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(549, 4);
@@ -197,9 +191,9 @@
             this.avgTemp2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.avgTemp2.Location = new System.Drawing.Point(1317, 866);
             this.avgTemp2.Name = "avgTemp2";
-            this.avgTemp2.Size = new System.Drawing.Size(374, 29);
+            this.avgTemp2.Size = new System.Drawing.Size(477, 29);
             this.avgTemp2.TabIndex = 9;
-            this.avgTemp2.Text = "Gennemsnitlige tempratur i rum 2:";
+            this.avgTemp2.Text = "Gennemsnit af 10 seneste målinger, Rum 2:";
             // 
             // avgTemp1
             // 
@@ -207,9 +201,9 @@
             this.avgTemp1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.avgTemp1.Location = new System.Drawing.Point(556, 866);
             this.avgTemp1.Name = "avgTemp1";
-            this.avgTemp1.Size = new System.Drawing.Size(374, 29);
+            this.avgTemp1.Size = new System.Drawing.Size(477, 29);
             this.avgTemp1.TabIndex = 8;
-            this.avgTemp1.Text = "Gennemsnitlige tempratur i rum 1:";
+            this.avgTemp1.Text = "Gennemsnit af 10 seneste målinger, Rum 1:";
             // 
             // panel4
             // 
@@ -234,7 +228,7 @@
             // 
             this.curTemp2.AutoSize = true;
             this.curTemp2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.curTemp2.Location = new System.Drawing.Point(1721, 803);
+            this.curTemp2.Location = new System.Drawing.Point(1721, 804);
             this.curTemp2.Name = "curTemp2";
             this.curTemp2.Size = new System.Drawing.Size(0, 29);
             this.curTemp2.TabIndex = 12;
@@ -271,81 +265,15 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.label2.Location = new System.Drawing.Point(156, 430);
+            this.label2.Location = new System.Drawing.Point(156, 532);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 36);
             this.label2.TabIndex = 16;
             this.label2.Text = "Rum 2";
             // 
-            // AktivitetRum1
-            // 
-            this.AktivitetRum1.AutoSize = true;
-            this.AktivitetRum1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AktivitetRum1.Location = new System.Drawing.Point(2077, 231);
-            this.AktivitetRum1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.AktivitetRum1.Name = "AktivitetRum1";
-            this.AktivitetRum1.Size = new System.Drawing.Size(86, 31);
-            this.AktivitetRum1.TabIndex = 17;
-            this.AktivitetRum1.Text = "label3";
-            // 
-            // AktivitetRum2
-            // 
-            this.AktivitetRum2.AutoSize = true;
-            this.AktivitetRum2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AktivitetRum2.Location = new System.Drawing.Point(2077, 308);
-            this.AktivitetRum2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.AktivitetRum2.Name = "AktivitetRum2";
-            this.AktivitetRum2.Size = new System.Drawing.Size(86, 31);
-            this.AktivitetRum2.TabIndex = 18;
-            this.AktivitetRum2.Text = "label4";
-            // 
             // sqLiteCommand1
             // 
             this.sqLiteCommand1.CommandText = null;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(2077, 177);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 31);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Aktivitet";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(2077, 506);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(184, 31);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "Status for rum";
-            // 
-            // StatusRum1
-            // 
-            this.StatusRum1.AutoSize = true;
-            this.StatusRum1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StatusRum1.Location = new System.Drawing.Point(2077, 581);
-            this.StatusRum1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.StatusRum1.Name = "StatusRum1";
-            this.StatusRum1.Size = new System.Drawing.Size(86, 31);
-            this.StatusRum1.TabIndex = 21;
-            this.StatusRum1.Text = "label7";
-            // 
-            // StatusRum2
-            // 
-            this.StatusRum2.AutoSize = true;
-            this.StatusRum2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StatusRum2.Location = new System.Drawing.Point(2077, 665);
-            this.StatusRum2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.StatusRum2.Name = "StatusRum2";
-            this.StatusRum2.Size = new System.Drawing.Size(86, 31);
-            this.StatusRum2.TabIndex = 22;
-            this.StatusRum2.Text = "label8";
             // 
             // label8
             // 
@@ -361,7 +289,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(283, 436);
+            this.label11.Location = new System.Drawing.Point(283, 537);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(92, 29);
             this.label11.TabIndex = 29;
@@ -374,12 +302,6 @@
             this.ClientSize = new System.Drawing.Size(1924, 1055);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.StatusRum2);
-            this.Controls.Add(this.StatusRum1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.AktivitetRum2);
-            this.Controls.Add(this.AktivitetRum1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.avgTempRoom2);
@@ -427,13 +349,7 @@
         private System.Windows.Forms.Label avgTempRoom2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label AktivitetRum1;
-        private System.Windows.Forms.Label AktivitetRum2;
         private System.Data.SQLite.SQLiteCommand sqLiteCommand1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label StatusRum1;
-        private System.Windows.Forms.Label StatusRum2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label11;
     }
